@@ -145,7 +145,7 @@ var WalletProvider = class _WalletProvider {
   }
   getChainConfigs(chainName) {
     const chain = viemChains[chainName];
-    if (!chain?.id) {
+    if (!(chain == null ? void 0 : chain.id)) {
       throw new Error("Invalid chain name");
     }
     return chain;
@@ -254,7 +254,7 @@ var WalletProvider = class _WalletProvider {
   };
   static genChainFromName(chainName, customRpcUrl) {
     const baseChain = viemChains[chainName];
-    if (!baseChain?.id) {
+    if (!(baseChain == null ? void 0 : baseChain.id)) {
       throw new Error("Invalid chain name");
     }
     const viemChain = customRpcUrl ? {
@@ -270,7 +270,8 @@ var WalletProvider = class _WalletProvider {
   }
 };
 var genChainsFromRuntime = (runtime) => {
-  const chainNames = runtime.character.settings.chains?.evm || [];
+  var _a;
+  const chainNames = ((_a = runtime.character.settings.chains) == null ? void 0 : _a.evm) || [];
   const chains = {};
   for (const chainName of chainNames) {
     const rpcUrl = runtime.getSetting(
@@ -323,7 +324,7 @@ var initWalletProvider = async (runtime) => {
 // src/actions/actionContractInteraction.ts
 import { parseAbi } from "viem";
 
-// ../../node_modules/zod/lib/index.mjs
+// node_modules/zod/lib/index.mjs
 var util;
 (function(util2) {
   util2.assertEqual = (val) => val;
