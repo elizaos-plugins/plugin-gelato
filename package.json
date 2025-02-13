@@ -1,5 +1,5 @@
 {
-    "name": "@elizaos/plugin-gelato",
+    "name": "@elizaos-plugins/plugin-gelato",
     "version": "0.1.9",
     "type": "module",
     "main": "dist/index.js",
@@ -19,7 +19,6 @@
         "dist"
     ],
     "dependencies": {
-        "@elizaos/core": "workspace:*",
         "@elizaos/plugin-tee": "^0.1.8",
         "@gelatonetwork/relay-sdk-viem": "^1.2.0",
         "tsup": "8.3.5",
