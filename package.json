@@ -35,5 +35,28 @@
         "lint:fix": "biome check --apply .",
         "format": "biome format .",
         "format:fix": "biome format --write ."
+    },
+    "agentConfig": {
+        "pluginType": "elizaos:client:1.0.0",
+        "pluginParameters": {
+            "GELATO_RELAY_API_KEY": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Your Gelato Relay API Key",
+                "optional": false
+            },
+            "EVM_PROVIDER_URL": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Your EVM provider URL (e.g., Alchemy or Infura endpoint)",
+                "optional": false
+            },
+            "EVM_PRIVATE_KEY": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Your wallet's private key",
+                "optional": false
+            }
+        }
     }
 }
